@@ -7,6 +7,7 @@ Plugin de Claude Code para el ecosistema de mini apps de Coco Mercado.
 - **MCP `miniapp-publisher`** ([`@cocowallet/miniapp-mcp`](https://www.npmjs.com/package/@cocowallet/miniapp-mcp)): publicar, republicar, listar, iniciar/detener mini apps y manejar el túnel de preview con hot reload.
 - **Skill `/mini-apps:frontend-design`**: guía de diseño visual de Anthropic para construir UIs distintivas y production-grade que no parezcan plantilla — dirección estética, tipografía y decisiones deliberadas de layout. Claude también la usa automáticamente cuando diseña UI nueva.
 - **Skill `/mini-apps:ui-kit`**: el UI kit de Coco Wallet para mini apps — tokens de diseño (colores, Poppins, spacing, radius) mapeados 1:1 del design system Flutter, más recetas de componentes (botones, cards, sheets, toasts). Claude la usa automáticamente al agregar o modificar componentes, para que la mini app se vea nativa dentro de la wallet.
+- **Skill `/mini-apps:deploy`**: despliega la mini app a producción en el team de Vercel de Coco (un proyecto `miniapp-<slug>` por app) y actualiza el catálogo con la URL fija. Requiere `VERCEL_TOKEN` y `VERCEL_TEAM_ID` — ver Requisitos.
 
 ## Requisitos
 
@@ -18,6 +19,13 @@ Plugin de Claude Code para el ecosistema de mini apps de Coco Mercado.
    ```
 
    Sin el token exportado, el server MCP no arranca (el plugin lo lee de la variable de entorno, nunca del código).
+
+3. **Credenciales de Vercel** (solo para deployar a producción con `/mini-apps:deploy`). Pedilas al equipo de wallet junto con el `PUBLISH_TOKEN`:
+
+   ```bash
+   export VERCEL_TOKEN="..."
+   export VERCEL_TEAM_ID="team_..."
+   ```
 
 ## Instalación
 
