@@ -18,7 +18,9 @@ Las mini apps corren dentro de un WebView de la wallet de Coco (app Flutter, tem
 
 ## Setup (verificar SIEMPRE primero)
 
-El scaffold del starter (`@cocowallet/miniapp-mcp`) puede venir **sin** estos tokens. Antes de escribir UI, revisá `tailwind.config.ts`: si `theme.extend` está vacío, configurá el theme:
+El scaffold del starter (`@cocowallet/miniapp-mcp`) puede venir **sin** estos tokens. Antes de escribir UI, revisá `tailwind.config.ts`: si `theme.extend` está vacío, configurá el theme.
+
+**IMPORTANTE:** Next no recarga `tailwind.config.ts` en caliente — después de editarlo, reiniciá el dev server (`stop_mini_app` + `start_mini_app`); si no, las clases de los tokens no compilan y la UI sale sin estilos.
 
 **`tailwind.config.ts`:**
 
