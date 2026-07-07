@@ -7,7 +7,7 @@ Plugin de Claude Code para crear mini apps de Coco Wallet describiéndolas: el a
 Dentro de Claude Code:
 
 ```
-/plugin marketplace add vickcharles/claude-plugins
+/plugin marketplace add coco-mercado/claude-plugins
 /plugin install mini-apps@coco-plugins
 ```
 
