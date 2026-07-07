@@ -1,6 +1,6 @@
 ---
 name: ui-kit
-description: Theme de Coco Wallet para mini apps — tokens de diseño (colores, tipografía Poppins, spacing, radius, tema oscuro). Usar SIEMPRE que se cree, agregue o modifique UI en una mini app de Coco, para que respete el theme de la wallet. También cuando el usuario diga "usa el UI kit", "el theme de la app", "estilo Coco".
+description: Usar SIEMPRE antes de crear, agregar o modificar cualquier UI en una mini app de Coco — pantallas, componentes, botones, cards, listas, modales, formularios, estilos — y al configurar Tailwind o CSS del proyecto. Aplica el theme de Coco Wallet (tokens de colores, tipografía Poppins, spacing, radius, tema oscuro) para que la mini app respete el look de la wallet. También cuando el usuario diga "usa el UI kit", "el theme de la app", "estilo Coco", "que se vea como la wallet".
 ---
 
 # Theme de Coco Wallet — Mini Apps
