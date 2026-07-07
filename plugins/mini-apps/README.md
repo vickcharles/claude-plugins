@@ -17,7 +17,7 @@ Exportá tu token de publicación (pedilo al equipo de wallet) y reiniciá Claud
 echo 'export PUBLISH_TOKEN="tok_..."' >> ~/.zshrc && source ~/.zshrc
 ```
 
-Requisitos: **Node ≥ 20** y **`cloudflared`** (`brew install cloudflared`) para el túnel de preview.
+Requisito: **Node ≥ 20**. Nada más — el túnel de preview se maneja solo (si no tenés `cloudflared`, el MCP lo descarga automáticamente la primera vez).
 
 ## MCP incluido
 
