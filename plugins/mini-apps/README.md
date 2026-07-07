@@ -5,7 +5,7 @@ Plugin de Claude Code para el ecosistema de mini apps de Coco Mercado.
 ## Qué incluye
 
 - **MCP `miniapp-publisher`** ([`@cocowallet/miniapp-mcp`](https://www.npmjs.com/package/@cocowallet/miniapp-mcp)): publicar, republicar, listar, iniciar/detener mini apps y manejar el túnel de preview con hot reload.
-- **Skills** (próximamente): se invocan como `/mini-apps:<nombre>`.
+- **Skill `/mini-apps:frontend-design`**: guía de diseño visual de Anthropic para construir UIs distintivas y production-grade que no parezcan plantilla — dirección estética, tipografía y decisiones deliberadas de layout. Claude también la usa automáticamente cuando diseña UI nueva.
 
 ## Requisitos
 
