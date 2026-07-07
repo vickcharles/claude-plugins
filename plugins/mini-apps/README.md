@@ -23,7 +23,7 @@ Plugin de Claude Code para el ecosistema de mini apps de Coco Mercado.
 Dentro de Claude Code:
 
 ```
-/plugin marketplace add coco-mercado/claude-plugins
+/plugin marketplace add vickcharles/claude-plugins
 /plugin install mini-apps@coco-plugins
 ```
 
