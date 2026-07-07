@@ -1,0 +1,8 @@
+{
+  "name": "mini-apps",
+  "description": "Mini apps de Coco Mercado — publicación vía MCP (miniapp-publisher) y skills de desarrollo de mini apps",
+  "version": "0.1.0",
+  "author": {
+    "name": "Coco Mercado"
+  }
+}

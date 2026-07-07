@@ -1,0 +1,14 @@
+{
+  "name": "coco-plugins",
+  "description": "Plugins de Claude Code de Coco Mercado — herramientas internas para desarrollo de mini apps y wallet",
+  "owner": {
+    "name": "Coco Mercado"
+  },
+  "plugins": [
+    {
+      "name": "mini-apps",
+      "source": "./plugins/mini-apps",
+      "description": "MCP y skills para desarrollar y publicar mini apps de Coco Mercado"
+    }
+  ]
+}
