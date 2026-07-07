@@ -11,13 +11,7 @@ Dentro de Claude Code:
 /plugin install mini-apps@coco-plugins
 ```
 
-Exportá tu token de publicación (pedilo al equipo de wallet) y reiniciá Claude Code desde una terminal nueva:
-
-```bash
-echo 'export PUBLISH_TOKEN="tok_..."' >> ~/.zshrc && source ~/.zshrc
-```
-
-Requisito: **Node ≥ 20**. Nada más — el túnel de preview se maneja solo (si no tenés `cloudflared`, el MCP lo descarga automáticamente la primera vez).
+Requisito: **Node ≥ 20**. Nada más — no hace falta ningún token por ahora, y el túnel de preview se maneja solo (si no tenés `cloudflared`, el MCP lo descarga automáticamente la primera vez).
 
 ## MCP incluido
 

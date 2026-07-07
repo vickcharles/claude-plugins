@@ -2,10 +2,10 @@
   "mcpServers": {
     "miniapp-publisher": {
       "command": "npx",
-      "args": ["-y", "@cocowallet/miniapp-mcp@latest"],
-      "env": {
-        "PUBLISH_TOKEN": "${PUBLISH_TOKEN}"
-      }
+      "args": [
+        "-y",
+        "@cocowallet/miniapp-mcp@latest"
+      ]
     }
   }
 }
