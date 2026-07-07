@@ -16,13 +16,13 @@ Las mini apps corren dentro de un WebView de la wallet de Coco (app Flutter, tem
 5. **Touch targets ≥ 44px**; es una app móvil táctil dentro de WebView.
 6. **El layout es tuyo.** Con estos tokens, diseñá una UI con identidad propia para la mini app — no repliques el home ni las pantallas de la wallet.
 
-## Setup (verificar SIEMPRE primero)
+## Setup (verificar primero)
 
-El scaffold del starter (`@cocowallet/miniapp-mcp`) puede venir **sin** estos tokens. Antes de escribir UI, revisá `tailwind.config.ts`: si `theme.extend` está vacío, configurá el theme.
+El theme usa el **theme default de Tailwind** extendido **solo con los colores** de Coco. Los scaffolds nuevos (`@cocowallet/miniapp-mcp` ≥ 0.3.3) ya lo traen; si `theme.extend.colors` no existe en `tailwind.config.ts` (scaffold viejo), agregalo:
 
 **IMPORTANTE:** Next no recarga `tailwind.config.ts` en caliente — después de editarlo, reiniciá el dev server (`stop_mini_app` + `start_mini_app`); si no, las clases de los tokens no compilan y la UI sale sin estilos.
 
-**`tailwind.config.ts`:**
+**`tailwind.config.ts`** (solo colores; no toques spacing, radius ni el resto del theme):
 
 ```ts
 theme: {
@@ -44,38 +44,19 @@ theme: {
       'txt-disabled': '#71717B',
       purple: '#A257FA',
     },
-    borderRadius: { xs: '4px', sm: '8px', md: '10px', lg: '12px', xl: '16px', pill: '100px' },
-    spacing: { 'ds-xs': '4px', 'ds-sm': '6px', 'ds-md': '8px', 'ds-lg': '12px', 'ds-xl': '16px', 'ds-xxl': '20px' },
-    fontFamily: { sans: ['Poppins', 'system-ui', 'sans-serif'] },
   },
 },
 ```
 
-**`globals.css`** — asegurate de que el body sea oscuro y Poppins con pesos forzados (el WebView a veces ignora los `font-weight` de Tailwind):
-
-```css
-:root { color-scheme: dark; }
-body {
-  margin: 0;
-  font-family: 'Poppins', system-ui, sans-serif;
-  background-color: #181818;
-  color: #ffffff;
-  -webkit-font-smoothing: antialiased;
-  touch-action: manipulation;
-}
-.font-bold { font-weight: 700 !important; }
-.font-semibold { font-weight: 600 !important; }
-.font-medium { font-weight: 500 !important; }
-::-webkit-scrollbar { display: none; }
-```
-
-**`layout.tsx`** — cargá Poppins (Google Fonts) y el body oscuro:
+**`layout.tsx`** — body oscuro con los tokens, y Poppins desde Google Fonts:
 
 ```tsx
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" />
 ...
-<body className="min-h-screen bg-bg text-txt antialiased">
+<body className="min-h-screen bg-bg text-txt antialiased font-[Poppins,system-ui,sans-serif]">
 ```
+
+Si el WebView ignora los `font-weight` de Tailwind, forzalos en `globals.css` (`.font-bold { font-weight: 700 !important; }`, etc.).
 
 ## Tokens de color
 
@@ -112,8 +93,7 @@ Poppins (base de diseño: 375px de ancho):
 
 ## Spacing y radius
 
-- Spacing: `ds-xs`(4) `ds-sm`(6) `ds-md`(8) `ds-lg`(12) `ds-xl`(16) `ds-xxl`(20). Padding horizontal de página: 16px.
-- Radius: `rounded-xs`(4) `rounded-sm`(8) `rounded-md`(10) `rounded-lg`(12) `rounded-xl`(16), `rounded-pill`(100px).
+Usá la **escala default de Tailwind** (`p-4`, `gap-3`, `rounded-lg`, `rounded-xl`, `rounded-full`…). Referencias de la wallet: padding horizontal de página 16px (`px-4`), cards con `rounded-2xl` aprox (16px), botones pill (`rounded-full`).
 
 ## Checklist antes de entregar UI
 
